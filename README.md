@@ -1,17 +1,26 @@
-## My Project
+# aws_glue_databrew_jupyter
 
-TODO: Fill this README out!
+A JupyterLab extension.
 
-Be sure to:
+### Development
 
-* Change the title in this README
-* Edit your repository description on GitHub
+1. Watch the source directory in another terminal tab
+* Let extension serve production assets retrieved from Cloudfront 
+```
+npm run watch
+```
+* Let extension serve local assets retrieved from webpack
+```
+npm run watch:local
+```
 
-## Security
+2. Install this local extension to your jupyter notebook
+```
+jupyter labextension install <path to this package> --no-build
+```
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
-
-## License
-
-This library is licensed under the MIT-0 License. See the LICENSE file.
+3. Run jupyterlab in watch mode in one terminal tab
+```
+jupyter lab --watch
+```
 

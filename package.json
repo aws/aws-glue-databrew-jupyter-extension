@@ -1,0 +1,36 @@
+{
+  "name": "aws_glue_databrew_jupyter",
+  "version": "0.1.0",
+  "description": "A JupyterLab Glue DataBrew extension.",
+  "license": "UNLICENSED",
+  "author": "cfangzh@amazon.com, zssimjee@amazon.com",
+  "files": [
+    "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+    "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+  ],
+  "main": "lib/index.js",
+  "style": "style/index.css",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "build:local": "npm run clean && npm run compile:local && npm run rename",
+    "compile:local": "tsc -p tsconfig_local.json",
+    "rename": "mv ./lib/index_local.js ./lib/index.js && mv ./lib/index_local.d.ts ./lib/index.d.ts",
+    "clean": "rimraf lib && rimraf *.tsbuildinfo",
+    "watch": "tsc -w",
+    "watch:local": "npm run clean && tsc-watch -p tsconfig_local.json --onSuccess 'npm run rename'"
+  },
+  "dependencies": {
+    "@jupyterlab/application": "^2.0.0",
+    "@lumino/commands": "^1.11.3",
+    "@lumino/widgets": "^1.13.3"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.0",
+    "tsc-watch": "^4.0.0",
+    "typescript": "~3.7.3"
+  },
+  "jupyterlab": {
+    "extension": true
+  }
+}
