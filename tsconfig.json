@@ -21,6 +21,7 @@
   },
   "include": [
     "src/index.ts",
-    "src/aws_glue_databrew_extension.ts"
+    "src/aws_glue_databrew_extension.ts",
+    "src/svg_icons.d.ts"
   ]
 }
