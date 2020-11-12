@@ -33,5 +33,10 @@
   },
   "jupyterlab": {
     "extension": true
-  }
+  },
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension"
+  ]
 }
