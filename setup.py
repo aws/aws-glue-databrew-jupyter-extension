@@ -7,7 +7,9 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     install_requires=[
         'aws-jupyter-proxy',
-        'notebook'
+        'notebook',
+        'botocore >= 1.19.17',
+        'boto3 >= 1.16.17'
     ],
     include_package_data=True,
     data_files=[
