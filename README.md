@@ -10,7 +10,8 @@ This is an extension for Jupyter Lab that allows you to manage your AWS Glue Dat
 
 ### Installation instructions
 
-Search for aws_glue_databrew_jupyter in the Jupyter Lab plugin store and click install
+1. run `pip install aws-jupyter-proxy`
+2. Search for aws_glue_databrew_jupyter in the Jupyter Lab plugin store and click install
 
 ### Command-line installation instructions
 1. run `jupyter labextension install aws_glue_databrew_jupyter`
