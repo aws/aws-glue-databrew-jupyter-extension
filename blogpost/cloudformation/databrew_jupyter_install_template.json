@@ -1,0 +1,338 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Deep Learning sandbox template; #tensoralex",
+    "Metadata": {
+        "AWS::CloudFormation::Interface": {
+            "ParameterGroups": [
+                {
+                    "Label": {
+                        "default": "Network Configuration"
+                    },
+                    "Parameters": [
+                        "DLVPC",
+                        "DLSubnet",
+                        "DLSecurityGroup" ,
+                        "AllowedIPAddress"
+                   ]
+                },
+                {
+                    "Label": {
+                        "default": "Deep learning image configuration"
+                    },
+                    "Parameters": [
+                        "InstanceType",
+                        "KeyName"
+                    ]
+                },
+                {
+                    "Label": {
+                        "default": "S3 bucket to store the raw, processed and training dataset"
+                    },
+                    "Parameters": [
+                        "S3Bucket"
+                    ]
+                }
+
+            ],
+            "ParameterLabels": {
+                "DLVPC": {
+                    "default": "VPC to deploy"
+                },
+                "DLSubnet": {
+                    "default": "Subnet to deploy"
+                },
+                "DLSecurityGroup": {
+                    "default": "Security group"
+                },
+
+
+                "InstanceType": {
+                    "default": "Instance type"
+                },
+
+                "KeyName": {
+                    "default": "EC2 Key Pair name"
+                },
+
+                "AllowedIPAddress": {
+                    "default": "Your public IP address"
+                },
+
+                "S3Bucket": {
+                    "default": "Existing S3 bucket name"
+                }
+
+
+            }
+        }
+    },
+    "Parameters": {
+        "DLSecurityGroup": {
+            "MinLength": "1",
+            "Type": "List<AWS::EC2::SecurityGroup::Id>",
+            "Description": "Select security group, i.e. default"
+        },
+        "DLVPC": {
+            "MinLength": "1",
+            "Type": "AWS::EC2::VPC::Id",
+            "Description": "Select a VPC from the list"
+        },
+        "DLSubnet": {
+            "MinLength": "1",
+            "Type": "AWS::EC2::Subnet::Id",
+            "Description": "Select any subnet to place EC2 instance (must be part of selected VPC)"
+        },
+
+        "AllowedIPAddress": {
+            "Description": "Your Public IP Address. Default 0.0.0.0/0 - open to the world!",
+            "Type": "String",
+            "MinLength": "9",
+            "Default": "0.0.0.0/0"
+        },
+
+        "InstanceType": {
+            "Type": "String",
+            "Default": "t2.large",
+            "AllowedValues": [
+                "t2.micro",
+                "t2.small",
+                "t2.medium",
+                "t2.large",
+                "m5.large",
+                "m5.xlarge"
+
+            ],
+            "ConstraintDescription": "Instance type",
+            "Description": "EC2 instance type, e.g. t2.micro"
+        },
+        "KeyName": {
+            "Type": "AWS::EC2::KeyPair::KeyName",
+            "MinLength": "1",
+            "Description": "Select an existing EC2 KeyPair to enable SSH access to the ECS instance"
+        },
+
+
+
+        "S3Bucket": {
+            "Description": "Associated bucket to gain access to",
+            "Type": "String",
+            "Default": ""
+        }
+
+    },
+    "Mappings": {
+        "RegionMap": {
+            "us-east-1": {"awsPublicDeepLearningAMI":"ami-0f899ff8474ea45a9"},
+            "us-east-2": {"awsPublicDeepLearningAMI":"ami-013f2a76b9b704e6b"},
+            "us-west-2": {"awsPublicDeepLearningAMI":"ami-0ffeb8a79074a6d60"},
+            "eu-west-1": {"awsPublicDeepLearningAMI":"ami-0f1bd937c8403b56e"},
+           "eu-central-1": {"awsPublicDeepLearningAMI":"ami-0120a05877e22e760"},
+           "ap-southeast-2": {"awsPublicDeepLearningAMI":"ami-0d92d157eee44ef58"},
+           "ap-northeast-1": {"awsPublicDeepLearningAMI":"ami-0c68850f3b4839d88"}
+         }
+        },
+
+    "Resources": {
+        "SecurityGroupJupyterInbound": {
+            "Type": "AWS::EC2::SecurityGroupIngress",
+            "Properties": {
+                "GroupId": {
+                    "Fn::Select": [
+                        "0",
+                        {
+                            "Ref": "DLSecurityGroup"
+                        }
+                    ]
+                },
+                "IpProtocol": "tcp",
+                "FromPort": "8888",
+                "ToPort": "8888",
+                "CidrIp": {
+                    "Ref": "AllowedIPAddress"
+                }
+            }
+        },
+        "DataBrewEC2Role": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "ec2.amazonaws.com",
+                                    "sagemaker.amazonaws.com",
+                                    "databrew.amazonaws.com"
+                                ]
+                            },
+                            "Action": [
+                                "sts:AssumeRole"
+                            ]
+                        }
+                    ]
+                },
+                "ManagedPolicyArns":["arn:aws:iam::aws:policy/AmazonSageMakerFullAccess","arn:aws:iam::aws:policy/AwsGlueDataBrewFullAccessPolicy"],
+                "Path": "/"
+            }
+        },
+        "DataBrewEC2RolePolicies": {
+            "Type": "AWS::IAM::ManagedPolicy",
+            "Properties": {
+                "ManagedPolicyName": "DLEC2Role",
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                      
+                        {
+                            "Sid": "AllowEC2Permissions",
+                            "Effect": "Allow",
+                            "Action": [
+                                "ec2:*"
+                            ],
+                            "Resource": "*"
+                        },
+			{
+			    
+				"Effect": "Allow",
+				"Action": "s3:ListAllMyBuckets",
+				"Resource": "arn:aws:s3:::*"
+			    
+			},
+			{
+			    
+				"Effect": "Allow",
+				"Action": [
+				    "s3:ListBucket",
+				    "s3:GetBucketLocation"
+				],
+				"Resource": {"Fn::Sub": "arn:aws:s3:::${S3Bucket}"}
+			  
+			},
+			{
+			 
+				"Effect": "Allow",
+				"Action": [
+				    "s3:GetObject",
+				    "s3:PutObject",
+				    "s3:DeleteObject"
+				],
+				"Resource": {"Fn::Sub": "arn:aws:s3:::${S3Bucket}/*"}
+			  
+			}
+		    ]}
+                ,
+                "Roles": [
+                    {
+                        "Ref": "DataBrewEC2Role"
+                    }
+                ]
+            }
+        },
+        "EC2InstanceProfile": {
+            "Type": "AWS::IAM::InstanceProfile",
+            "Properties": {
+                "Path": "/",
+                "Roles": [
+                    {
+                        "Ref": "DataBrewEC2Role"
+                    }
+                ]
+            }
+        },
+
+
+
+       
+        "DataBrewJupyterEC2Instance": {
+            "Type": "AWS::EC2::Instance",
+            "CreationPolicy": {
+                "ResourceSignal": {
+                    "Timeout": "PT15M"
+                }
+            },
+            "Properties": {
+                "IamInstanceProfile": {
+                    "Ref": "EC2InstanceProfile"
+                },
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": {
+                            "Ref": "AWS::StackName"
+                        }
+                    }
+                ],
+                "ImageId": {
+                    "Fn::FindInMap": [
+                        "RegionMap",
+                        {
+                            "Ref": "AWS::Region"
+                        },
+                        
+                         "awsPublicDeepLearningAMI"
+                        
+                    ]
+                },
+                "InstanceType": {
+                    "Ref": "InstanceType"
+                },
+                "SubnetId": {
+                    "Ref": "DLSubnet"
+                },
+                "SecurityGroupIds": {
+                    "Ref": "DLSecurityGroup"
+                },
+                "KeyName": {
+                    "Ref": "KeyName"
+                },
+                "UserData": {
+                    "Fn::Base64": {
+                        "Fn::Join": [
+                            "",
+                            [
+                                "#!/bin/bash -x\n",
+                                "exec > >(tee /var/log/bootstrap.log|logger -t user-data ) 2>&1\n",
+                                "wget \"https://aabg-sonti.s3.us-east-2.amazonaws.com/databrew/scripts/ec2user-jupyter-config.sh\"\n",
+                                "chmod +x ec2user-jupyter-config.sh\n",
+                                "sudo su - ec2-user bash -c '/ec2user-jupyter-config.sh $@' ", {"Ref": "AWS::Region"}, "\n",
+                                "/opt/aws/bin/cfn-signal -e $? ",
+                                "         --stack ",
+                                {
+                                    "Ref": "AWS::StackName"
+                                },
+                                "         --resource DataBrewJupyterEC2Instance ",
+                                "         --region ",
+                                {
+                                    "Ref": "AWS::Region"
+                                },
+                                "\n"
+                            ]
+                        ]
+                    }
+                }
+            }
+         }
+        },
+    "Outputs": {
+        "JupyterURL": {
+            "Value": {
+                "Fn::Join": [
+                    "",
+                    [
+                        "https://",
+                        {
+                            "Fn::GetAtt": [
+                                "DataBrewJupyterEC2Instance",
+                                "PublicDnsName"
+                            ]
+                        },
+                        ":8888/lab"
+                    ]
+                ]
+            }
+        }
+
+    }
+}
