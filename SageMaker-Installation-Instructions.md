@@ -1,3 +1,7 @@
+### Ensuring permissions for your SageMaker role ###
+Make sure to add the correct permissions to the role your SageMaker notebook runs with. A good place to start is by adding the 'AwsGlueDataBrewFullAccessPolicy' managed policy to the role, and then adding inline permissions allowing s3:GetObject and s3:PutObject for the bucket in which you would like to operate.
+
+### Installing the plugin ###
 1. Uninstall extensions that prevent us from upgrading the Jupyter environment
 ```
 jupyter labextension uninstall @jupyterlab/celltags;
