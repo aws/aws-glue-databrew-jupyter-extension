@@ -294,7 +294,7 @@
                             [
                                 "#!/bin/bash -x\n",
                                 "exec > >(tee /var/log/bootstrap.log|logger -t user-data ) 2>&1\n",
-                                "wget \"https://raw.githubusercontent.com/KarthikSonti/aws-glue-databrew-jupyter-extension/add-cft-and-samples/blogpost/cloudformation/ec2user-jupyter-config.sh\"\n",
+                                "wget \"https://raw.githubusercontent.com/aws/aws-glue-databrew-jupyter-extension/main/blogpost/cloudformation/ec2user-jupyter-config.sh\"\n",
                                 "chmod +x ec2user-jupyter-config.sh\n",
                                 "sudo su - ec2-user bash -c '/ec2user-jupyter-config.sh $@' ", {"Ref": "AWS::Region"}, "\n",
                                 "/opt/aws/bin/cfn-signal -e $? ",
