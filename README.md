@@ -31,3 +31,7 @@ See https://github.com/aws/aws-glue-databrew-jupyter-extension/blob/main/SageMak
 5. Build jupyter lab assets: `jupyter lab build`
 5. Start jupyter lab in debug mode: `jupyter lab --debug`
 
+### Publishing new versions
+1. Update the version and push via https://docs.npmjs.com/updating-your-published-package-version-number
+2. tag the commit with a new version tag
+
