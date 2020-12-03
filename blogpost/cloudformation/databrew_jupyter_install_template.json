@@ -1,6 +1,6 @@
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "Deep Learning sandbox template; #tensoralex",
+    "Description": "AWS Glue DataBrew Jupyter Plugin Stack",
     "Metadata": {
         "AWS::CloudFormation::Interface": {
             "ParameterGroups": [
