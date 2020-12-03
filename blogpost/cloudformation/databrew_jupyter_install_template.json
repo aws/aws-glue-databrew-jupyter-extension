@@ -55,7 +55,7 @@
                 },
 
                 "AllowedIPAddress": {
-                    "default": "Your public IP address in CIDR notation to access Jupyter at port 8888 "
+                    "default": "Your IP address in CIDR notation to access Jupyter at port 8888 "
                 },
 
                 "S3Bucket": {
@@ -84,10 +84,10 @@
         },
 
         "AllowedIPAddress": {
-            "Description": "You can get your IP address at http://checkip.amazonaws.com/ . Default value is 0.0.0.0/0 - open to the world for the port 8888 ",
+            "Description": "You can get your IP address at http://checkip.amazonaws.com/ . End with /32 to make your IP address compaitble with CIDR notation",
+            "ConstraintDescription": "Requires a valid IP Address with a /32 CIDR block",
             "Type": "String",
-            "MinLength": "9",
-            "Default": "0.0.0.0/0"
+            "AllowedPattern":"^(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})(\\/(32))$"
         },
 
         "InstanceType": {
