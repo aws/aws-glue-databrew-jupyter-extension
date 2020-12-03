@@ -55,7 +55,7 @@
                 },
 
                 "AllowedIPAddress": {
-                    "default": "Your public IP address"
+                    "default": "Your public IP address in CIDR notation to access Jupyter at port 8888 "
                 },
 
                 "S3Bucket": {
@@ -84,7 +84,7 @@
         },
 
         "AllowedIPAddress": {
-            "Description": "Your Public IP Address. Default 0.0.0.0/0 - open to the world!",
+            "Description": "You can get your IP address at http://checkip.amazonaws.com/ . Default value is 0.0.0.0/0 - open to the world for the port 8888 ",
             "Type": "String",
             "MinLength": "9",
             "Default": "0.0.0.0/0"
