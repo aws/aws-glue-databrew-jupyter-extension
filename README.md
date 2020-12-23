@@ -24,7 +24,7 @@ See https://github.com/aws/aws-glue-databrew-jupyter-extension/blob/main/SageMak
 
 
 ### Build and install instructions
-1. Install npm dependencies: `npm i tsc --global; npm i rimraf --global; npm i;`
+1. Install npm dependencies: `npm i typescript --global; npm i rimraf --global; npm i;`
 2. Build the extension: `npm run:build;`
 3. Install python dependencies: `pip install ./`
 4. Install the extension: `jupyter labextension install ./`
