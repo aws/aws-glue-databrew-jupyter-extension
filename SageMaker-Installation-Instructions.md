@@ -10,7 +10,7 @@ jupyter labextension uninstall @jupyterlab/toc;
 ```
 2. Upgrade Jupyter
 ```
-conda install --yes -c conda-forge jupyterlab;
+conda install --yes -c conda-forge jupyterlab=2;
 ```
 3. Install dependencies
 ```
