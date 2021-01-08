@@ -22,6 +22,9 @@
   "include": [
     "src/index.ts",
     "src/aws_glue_databrew_extension.ts",
+    "src/MainLauncher.ts",
+    "src/LeftSideLauncher.ts",
+    "src/constants.ts",
     "src/svg_icons.d.ts"
   ]
 }
