@@ -5,7 +5,8 @@ export PATH=/home/ec2-user/anaconda3/bin:$PATH
 curl -sL https://rpm.nodesource.com/setup_15.x | sudo bash -
 sudo yum install -y nodejs
 pip install --upgrade jupyter
-pip install --upgrade jupyterlab
+pip uninstall jupyterlab
+pip install "jupyterlab>=2.2.9,<3.0.0"
 pip install aws-jupyter-proxy
 
 npm_version=`npm --version`
