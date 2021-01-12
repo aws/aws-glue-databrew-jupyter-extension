@@ -29,7 +29,7 @@ export class LuminoMainLauncher extends LuminoWidget {
 }
 
 export class MainLauncher {
-  static create(version: number, cssPath: string) {
+  static create(version: number, cssPath: string, region: string) {
     const widget = version === 1 ? new PhosphorMainLauncher() : new LuminoMainLauncher();
 
     widget.cssPath = cssPath;
@@ -47,8 +47,9 @@ export class MainLauncher {
           <meta charset="UTF-8">
           <meta name="awsc-lang" content="en">
           <meta name="aws-glue-databrew-jupyter" content="true">
+          <meta id="aws-glue-databrew-jupyter-region" name="aws-region" content="${region}">
           <title>AWS</title>
-          <link rel="stylesheet" href=` + cssPath + `>
+          <link rel="stylesheet" href="${cssPath}">
           <style>
             .loader {
               display: inline-block;

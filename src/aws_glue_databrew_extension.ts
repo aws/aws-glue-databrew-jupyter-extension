@@ -15,7 +15,15 @@ import {
 } from '@lumino/widgets';
 
 import {
-  GLUE_DATABREW_RENDER
+  getAWSConfig,
+  getPrefix
+} from './client';
+
+import {
+  CONTENT_PREFIX,
+  GLUE_DATABREW_RENDER,
+  jsFileName,
+  styleFileName
 } from './constants';
 
 import {
@@ -31,13 +39,17 @@ const getAppVersion = (app: JupyterFrontEnd) => Number(app.version.split('.')[0]
 /**
  * Initialize the console widget extension
  */
-export const initiateExtension = (getPaths: () => Promise<string[]>) => {
+export const initiateExtension = () => {
   const activate = async (app: JupyterFrontEnd, palette: ICommandPalette, restorer: ILayoutRestorer, launcher: ILauncher) => {
     const version = getAppVersion(app);
-    // Declare a widget variable
-    const [jsPath, cssPath] = await getPaths();
 
-    const consoleWidget = MainLauncher.create(version, cssPath);
+    const prefix = await getPrefix();
+    const jsPath = `${CONTENT_PREFIX}/${prefix}/${jsFileName}`;
+    const cssPath = `${CONTENT_PREFIX}/${prefix}/${styleFileName}`;
+    
+    const { region } = await getAWSConfig();
+
+    const consoleWidget = MainLauncher.create(version, cssPath, region);
 
     app.commands.addCommand(GLUE_DATABREW_RENDER, {
       label: 'Launch AWS Glue DataBrew',

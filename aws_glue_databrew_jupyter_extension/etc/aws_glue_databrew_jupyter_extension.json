@@ -1,7 +1,7 @@
 {
   "NotebookApp": {
     "nbserver_extensions": {
-      "aws_jupyter_proxy": true
+      "aws_glue_databrew_jupyter_extension": true
     }
   }
 }

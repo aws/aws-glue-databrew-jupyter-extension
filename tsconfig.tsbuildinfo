@@ -1430,8 +1430,16 @@
         "signature": "d9ac2d11a7feabbc00ab593796bbc3f84884803068a125b45666368b6f67dca3"
       },
       "./src/constants.ts": {
-        "version": "9a209e179860049eb4726eddf1598f4f0d4ed21634957b2a318ded4848391d05",
-        "signature": "87418576438b2534c414c5fbd227e48f18af4c88494cd2e566a58a1bf2f1b216"
+        "version": "2a76ec92041834567ccbe319040672f73b2228a2cb4b52e47936d73f407836c5",
+        "signature": "af633de24711d1a553b6ccc396f7389d4dfb46e5bd267706f47e6bb7b0518f6a"
+      },
+      "./src/types.ts": {
+        "version": "b3bf2a38b18b598e333d077f2c3ce1d9199a841bb972c13fc7952bd040a0c708",
+        "signature": "c96be80046d3d154ae3a668a2f0f76572c65cba026b881d1434b5f023a52627f"
+      },
+      "./src/client.ts": {
+        "version": "9828ecbfc7960385ae54d49f203736c41eea4bc7d138b95f2ac57b904fb7012d",
+        "signature": "44d98514808c97a80081e238ee4e9b3807b19f13d0047da73d7332b0e38dc439"
       },
       "./node_modules/@phosphor/widgets/lib/boxengine.d.ts": {
         "version": "518f0974b55341500d4234068f32fa9750c3d373f41edebbb99c47798b2d102b",
@@ -1654,19 +1662,19 @@
         "signature": "ce75ab9766be65e1b6837cba39ea25ebfbe25f431e0f97e1863743817fad2d91"
       },
       "./src/leftsidelauncher.ts": {
-        "version": "4aad8e64dd7e47561f78e1271ef72768c6b069186979cbada3f4d462a7bb7f4f",
+        "version": "c16d7266472abd363e17665c7b7263b4f0e1a69b558970093b1fe4621f7a70a4",
         "signature": "db2f5f64826f0304cf778d51b135c1bc8eb69289a5a8217106055ef1a752dbf1"
       },
       "./src/mainlauncher.ts": {
-        "version": "b2ed6cd82f44377c8ea2f6b97a5ff2af22828e9b350c3908850000d590c9d296",
-        "signature": "bc20ff78e9b1df162745ac36b63b928733e19b035a61cd4a509d8159dbc1d1e8"
+        "version": "2452078fe6918994f78f511d184815135d06b10737ca19ed5120c0afb4dcefb2",
+        "signature": "fd8fe6f9ebae12dbf948b378e35dc3e66a4ff2cfe824d5b24981df6a46d7d5eb"
       },
       "./src/aws_glue_databrew_extension.ts": {
-        "version": "cc3d045ce8a80d824f2b4080eac650d3f2f3dc80ff0241e31c574f93c423cf0f",
-        "signature": "eeb642b57a8891c39dca104f1ca10bbaff45d1fe7e3d0fb0632333dd32271eb6"
+        "version": "efc3e83cfc237e6730ca5c92ace63e4109672b5ac78ce1a7c9814d8981b6f075",
+        "signature": "674d457d34215b25157f7d13623c98619420036a08aa28a954d7cfa934871175"
       },
       "./src/index.ts": {
-        "version": "bafc391b4efa5a1a01be881b76eaedc0d522766a067215a8db6bafed9a039ba7",
+        "version": "79ca691283b0497326c729dd620a50e26b93e644e2512ea864b95bffc9c4eceb",
         "signature": "ba8cdf6e5e786fee2541e7a49f93e1afd52fcb2730ae95374fcaa2eebac6efe4"
       },
       "./src/svg_icons.d.ts": {
@@ -3272,6 +3280,10 @@
         "./node_modules/@lumino/widgets/types/index.d.ts",
         "./node_modules/@types/react/index.d.ts"
       ],
+      "./src/client.ts": [
+        "./src/constants.ts",
+        "./src/types.ts"
+      ],
       "./node_modules/@phosphor/algorithm/lib/chain.d.ts": [
         "./node_modules/@phosphor/algorithm/lib/iter.d.ts"
       ],
@@ -3526,6 +3538,7 @@
         "./node_modules/@jupyterlab/apputils/lib/index.d.ts",
         "./node_modules/@jupyterlab/launcher/lib/index.d.ts",
         "./node_modules/@lumino/widgets/types/index.d.ts",
+        "./src/client.ts",
         "./src/constants.ts",
         "./src/leftsidelauncher.ts",
         "./src/mainlauncher.ts"
@@ -5127,6 +5140,9 @@
         "./node_modules/@blueprintjs/core/lib/esm/common/intent.d.ts",
         "./node_modules/@blueprintjs/core/lib/esm/common/position.d.ts"
       ],
+      "./src/client.ts": [
+        "./src/types.ts"
+      ],
       "./node_modules/@phosphor/widgets/lib/index.d.ts": [
         "./node_modules/@phosphor/widgets/lib/boxengine.d.ts",
         "./node_modules/@phosphor/widgets/lib/boxlayout.d.ts",
@@ -5701,6 +5717,8 @@
       "./node_modules/@jupyterlab/application/lib/index.d.ts",
       "./node_modules/@jupyterlab/launcher/lib/index.d.ts",
       "./src/constants.ts",
+      "./src/types.ts",
+      "./src/client.ts",
       "./node_modules/@phosphor/widgets/lib/boxengine.d.ts",
       "./node_modules/@phosphor/messaging/lib/index.d.ts",
       "./node_modules/@phosphor/algorithm/lib/array.d.ts",
