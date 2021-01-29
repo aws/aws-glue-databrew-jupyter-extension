@@ -1429,9 +1429,21 @@
         "version": "d9ac2d11a7feabbc00ab593796bbc3f84884803068a125b45666368b6f67dca3",
         "signature": "d9ac2d11a7feabbc00ab593796bbc3f84884803068a125b45666368b6f67dca3"
       },
+      "./src/types.ts": {
+        "version": "2fa99a97776381d20264b0730f0ff5076565515a33a0b3fb8431377bf9cc95ec",
+        "signature": "9153563ec8445a492ffc79678a0be69473ad9c10db1a4804b20f6a7640aee454"
+      },
+      "./src/client.ts": {
+        "version": "5177ad1dfb89109c5e8ffd8ef7e3ae979c40e42ab591357ac5cb75326cf302f5",
+        "signature": "98e819b07021a75c61c3d8a6601f068b2fdb6eb227ada63cb085ec36824cd1b1"
+      },
+      "./src/subdomain.json": {
+        "version": "a323c33639224f6517b9508faacb696c92ef8cc7d79460a65acd2fa64798bfa1",
+        "signature": "e5ce8c5f4d076f7b46fd2f0ee246d9b16a96335944c54f195c15ba9366fa81c8"
+      },
       "./src/constants.ts": {
-        "version": "9a209e179860049eb4726eddf1598f4f0d4ed21634957b2a318ded4848391d05",
-        "signature": "87418576438b2534c414c5fbd227e48f18af4c88494cd2e566a58a1bf2f1b216"
+        "version": "96c0e005e2c9352cca219666db3a29ba154fd7e7fbd547c6d766f9f09395f0fd",
+        "signature": "bffdca456132485287c80b6a4bea02d3829a5a701e163afab3261d11a4d1edec"
       },
       "./node_modules/@phosphor/widgets/lib/boxengine.d.ts": {
         "version": "518f0974b55341500d4234068f32fa9750c3d373f41edebbb99c47798b2d102b",
@@ -1654,24 +1666,56 @@
         "signature": "ce75ab9766be65e1b6837cba39ea25ebfbe25f431e0f97e1863743817fad2d91"
       },
       "./src/leftsidelauncher.ts": {
-        "version": "4aad8e64dd7e47561f78e1271ef72768c6b069186979cbada3f4d462a7bb7f4f",
-        "signature": "db2f5f64826f0304cf778d51b135c1bc8eb69289a5a8217106055ef1a752dbf1"
+        "version": "5b4375923d3d269cfc601d07c00b19face2564803f6595576fad89ee585b42c3",
+        "signature": "c9c5e764f2a5482546c1c4fb40c310263397ff5c53069e1f485ae55eea498abc"
       },
       "./src/mainlauncher.ts": {
-        "version": "b2ed6cd82f44377c8ea2f6b97a5ff2af22828e9b350c3908850000d590c9d296",
-        "signature": "bc20ff78e9b1df162745ac36b63b928733e19b035a61cd4a509d8159dbc1d1e8"
+        "version": "fee43110b56cd91c3f875a533a8a5f144e890ba481f7c9785319a72950bc2dae",
+        "signature": "63381bcdae9c1db9ed8996e5194c37193906891e8759e61a1ea46ff8549a19e0"
       },
       "./src/aws_glue_databrew_extension.ts": {
-        "version": "cc3d045ce8a80d824f2b4080eac650d3f2f3dc80ff0241e31c574f93c423cf0f",
-        "signature": "eeb642b57a8891c39dca104f1ca10bbaff45d1fe7e3d0fb0632333dd32271eb6"
+        "version": "7db99f94d93b99b3ce6d734250e376b9eb787929ee1ebe6b8fe33502755a9da3",
+        "signature": "9253a39dd2652b931dcd5d7d788afbaf995ceb27ff8e268084603f93e1cf0a60"
       },
       "./src/index.ts": {
-        "version": "bafc391b4efa5a1a01be881b76eaedc0d522766a067215a8db6bafed9a039ba7",
-        "signature": "ba8cdf6e5e786fee2541e7a49f93e1afd52fcb2730ae95374fcaa2eebac6efe4"
+        "version": "5eb33ff9d2f684b3a3d33dccc60ad5c54863f387e245a11aec0e6deeedc63243",
+        "signature": "b389de311a66aa90a3f64ef459d8a9887a043436369f306854460eef218bea10"
       },
-      "./src/svg_icons.d.ts": {
-        "version": "5563c7802bed1a2215fde8b593aee660267b6730508153641e8ce76a50a3024d",
-        "signature": "5563c7802bed1a2215fde8b593aee660267b6730508153641e8ce76a50a3024d"
+      "./node_modules/jest-diff/build/ts3.4/cleanupsemantic.d.ts": {
+        "version": "d3f71718012cf793afd0e6dbf8c3b2c7670dd4dd68dfdcee5b280b20c5c5f207",
+        "signature": "d3f71718012cf793afd0e6dbf8c3b2c7670dd4dd68dfdcee5b280b20c5c5f207"
+      },
+      "./node_modules/jest-diff/build/ts3.4/types.d.ts": {
+        "version": "9fd17d8fcaaadff8ea8acaa1be7ae46f9434657d62ceb2932083bc8156d30d55",
+        "signature": "9fd17d8fcaaadff8ea8acaa1be7ae46f9434657d62ceb2932083bc8156d30d55"
+      },
+      "./node_modules/jest-diff/build/ts3.4/difflines.d.ts": {
+        "version": "747b3159ab8ae386103b3e756b0b8890e5fdbb171da4b1cffd129e30825f3b40",
+        "signature": "747b3159ab8ae386103b3e756b0b8890e5fdbb171da4b1cffd129e30825f3b40"
+      },
+      "./node_modules/jest-diff/build/ts3.4/printdiffs.d.ts": {
+        "version": "9770ffc9151e11eb053917a88c564659e8d693bb688f524cc09c200cdea498d9",
+        "signature": "9770ffc9151e11eb053917a88c564659e8d693bb688f524cc09c200cdea498d9"
+      },
+      "./node_modules/jest-diff/build/ts3.4/index.d.ts": {
+        "version": "04349ed673ffd6efaa8f038f956e4f2900ac5ccd7479dc4e229619bd8ceac1a5",
+        "signature": "04349ed673ffd6efaa8f038f956e4f2900ac5ccd7479dc4e229619bd8ceac1a5"
+      },
+      "./node_modules/pretty-format/build/ts3.4/types.d.ts": {
+        "version": "ca515643955ee73349a4b8daf4a8179b44b4978f976e93f3ff472ffe649b5051",
+        "signature": "ca515643955ee73349a4b8daf4a8179b44b4978f976e93f3ff472ffe649b5051"
+      },
+      "./node_modules/pretty-format/build/ts3.4/index.d.ts": {
+        "version": "6f935cbac1b663774dd15b39fb94c62153f2d1aa10dfa0955776512fa65db053",
+        "signature": "6f935cbac1b663774dd15b39fb94c62153f2d1aa10dfa0955776512fa65db053"
+      },
+      "./node_modules/@types/jest/index.d.ts": {
+        "version": "f624e578325b8c58e55b30c998b1f4c3ec1b61a9fa66373da4250c89b7880d44",
+        "signature": "f624e578325b8c58e55b30c998b1f4c3ec1b61a9fa66373da4250c89b7880d44"
+      },
+      "./node_modules/@types/jest/ts3.2/index.d.ts": {
+        "version": "d3002f620eab4bf6476c9da5c0efb2041d46f7df8b3032a5631bd206abef2c75",
+        "signature": "d3002f620eab4bf6476c9da5c0efb2041d46f7df8b3032a5631bd206abef2c75"
       }
     },
     "options": {
@@ -1683,7 +1727,6 @@
       "jsx": 2,
       "module": 99,
       "moduleResolution": 2,
-      "noEmitOnError": true,
       "noImplicitAny": true,
       "noUnusedLocals": true,
       "preserveWatchOutput": true,
@@ -1692,7 +1735,10 @@
       "strict": true,
       "strictNullChecks": false,
       "target": 4,
-      "types": [],
+      "types": [
+        "jest"
+      ],
+      "resolveJsonModule": true,
       "configFilePath": "./tsconfig.json"
     },
     "referencedMap": {
@@ -3272,6 +3318,12 @@
         "./node_modules/@lumino/widgets/types/index.d.ts",
         "./node_modules/@types/react/index.d.ts"
       ],
+      "./src/client.ts": [
+        "./src/types.ts"
+      ],
+      "./src/constants.ts": [
+        "./src/subdomain.json"
+      ],
       "./node_modules/@phosphor/algorithm/lib/chain.d.ts": [
         "./node_modules/@phosphor/algorithm/lib/iter.d.ts"
       ],
@@ -3519,19 +3571,46 @@
       ],
       "./src/mainlauncher.ts": [
         "./node_modules/@phosphor/widgets/lib/index.d.ts",
-        "./node_modules/@lumino/widgets/types/index.d.ts"
+        "./node_modules/@lumino/widgets/types/index.d.ts",
+        "./src/types.ts"
       ],
       "./src/aws_glue_databrew_extension.ts": [
         "./node_modules/@jupyterlab/application/lib/index.d.ts",
         "./node_modules/@jupyterlab/apputils/lib/index.d.ts",
         "./node_modules/@jupyterlab/launcher/lib/index.d.ts",
         "./node_modules/@lumino/widgets/types/index.d.ts",
+        "./src/client.ts",
         "./src/constants.ts",
         "./src/leftsidelauncher.ts",
         "./src/mainlauncher.ts"
       ],
       "./src/index.ts": [
-        "./src/aws_glue_databrew_extension.ts"
+        "./src/aws_glue_databrew_extension.ts",
+        "./src/constants.ts"
+      ],
+      "./node_modules/jest-diff/build/ts3.4/difflines.d.ts": [
+        "./node_modules/jest-diff/build/ts3.4/cleanupsemantic.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/types.d.ts"
+      ],
+      "./node_modules/jest-diff/build/ts3.4/printdiffs.d.ts": [
+        "./node_modules/jest-diff/build/ts3.4/cleanupsemantic.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/types.d.ts"
+      ],
+      "./node_modules/jest-diff/build/ts3.4/index.d.ts": [
+        "./node_modules/jest-diff/build/ts3.4/cleanupsemantic.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/difflines.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/printdiffs.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/types.d.ts"
+      ],
+      "./node_modules/pretty-format/build/ts3.4/index.d.ts": [
+        "./node_modules/pretty-format/build/ts3.4/types.d.ts"
+      ],
+      "./node_modules/@types/jest/index.d.ts": [
+        "./node_modules/jest-diff/build/ts3.4/index.d.ts",
+        "./node_modules/pretty-format/build/ts3.4/index.d.ts"
+      ],
+      "./node_modules/@types/jest/ts3.2/index.d.ts": [
+        "./node_modules/@types/jest/index.d.ts"
       ]
     },
     "exportedModulesMap": {
@@ -3890,7 +3969,8 @@
       ],
       "./src/mainlauncher.ts": [
         "./node_modules/@phosphor/widgets/lib/index.d.ts",
-        "./node_modules/@lumino/widgets/types/index.d.ts"
+        "./node_modules/@lumino/widgets/types/index.d.ts",
+        "./src/types.ts"
       ],
       "./src/leftsidelauncher.ts": [
         "./node_modules/@phosphor/commands/lib/index.d.ts",
@@ -5127,6 +5207,9 @@
         "./node_modules/@blueprintjs/core/lib/esm/common/intent.d.ts",
         "./node_modules/@blueprintjs/core/lib/esm/common/position.d.ts"
       ],
+      "./src/client.ts": [
+        "./src/types.ts"
+      ],
       "./node_modules/@phosphor/widgets/lib/index.d.ts": [
         "./node_modules/@phosphor/widgets/lib/boxengine.d.ts",
         "./node_modules/@phosphor/widgets/lib/boxlayout.d.ts",
@@ -5364,6 +5447,30 @@
         "./node_modules/@phosphor/coreutils/lib/random.d.ts",
         "./node_modules/@phosphor/coreutils/lib/token.d.ts",
         "./node_modules/@phosphor/coreutils/lib/uuid.d.ts"
+      ],
+      "./node_modules/jest-diff/build/ts3.4/index.d.ts": [
+        "./node_modules/jest-diff/build/ts3.4/cleanupsemantic.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/difflines.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/printdiffs.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/types.d.ts"
+      ],
+      "./node_modules/@types/jest/index.d.ts": [
+        "./node_modules/jest-diff/build/ts3.4/index.d.ts",
+        "./node_modules/pretty-format/build/ts3.4/index.d.ts"
+      ],
+      "./node_modules/@types/jest/ts3.2/index.d.ts": [
+        "./node_modules/@types/jest/index.d.ts"
+      ],
+      "./node_modules/jest-diff/build/ts3.4/printdiffs.d.ts": [
+        "./node_modules/jest-diff/build/ts3.4/cleanupsemantic.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/types.d.ts"
+      ],
+      "./node_modules/jest-diff/build/ts3.4/difflines.d.ts": [
+        "./node_modules/jest-diff/build/ts3.4/cleanupsemantic.d.ts",
+        "./node_modules/jest-diff/build/ts3.4/types.d.ts"
+      ],
+      "./node_modules/pretty-format/build/ts3.4/index.d.ts": [
+        "./node_modules/pretty-format/build/ts3.4/types.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -5700,6 +5807,9 @@
       "./node_modules/@jupyterlab/application/lib/router.d.ts",
       "./node_modules/@jupyterlab/application/lib/index.d.ts",
       "./node_modules/@jupyterlab/launcher/lib/index.d.ts",
+      "./src/types.ts",
+      "./src/client.ts",
+      "./src/subdomain.json",
       "./src/constants.ts",
       "./node_modules/@phosphor/widgets/lib/boxengine.d.ts",
       "./node_modules/@phosphor/messaging/lib/index.d.ts",
@@ -5760,7 +5870,15 @@
       "./src/mainlauncher.ts",
       "./src/aws_glue_databrew_extension.ts",
       "./src/index.ts",
-      "./src/svg_icons.d.ts",
+      "./node_modules/jest-diff/build/ts3.4/cleanupsemantic.d.ts",
+      "./node_modules/jest-diff/build/ts3.4/types.d.ts",
+      "./node_modules/jest-diff/build/ts3.4/difflines.d.ts",
+      "./node_modules/jest-diff/build/ts3.4/printdiffs.d.ts",
+      "./node_modules/jest-diff/build/ts3.4/index.d.ts",
+      "./node_modules/pretty-format/build/ts3.4/types.d.ts",
+      "./node_modules/pretty-format/build/ts3.4/index.d.ts",
+      "./node_modules/@types/jest/index.d.ts",
+      "./node_modules/@types/jest/ts3.2/index.d.ts",
       "./node_modules/typescript/lib/lib.es2015.d.ts",
       "./node_modules/typescript/lib/lib.es2016.d.ts",
       "./node_modules/typescript/lib/lib.es2017.d.ts",

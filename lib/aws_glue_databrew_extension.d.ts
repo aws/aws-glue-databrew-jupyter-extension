@@ -1,4 +1,4 @@
-import { JupyterFrontEndPlugin } from '@jupyterlab/application';
+import { JupyterFrontEndPlugin } from "@jupyterlab/application";
 /**
  * Initialize the console widget extension
  */
