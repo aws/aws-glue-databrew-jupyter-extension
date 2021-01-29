@@ -1,10 +1,6 @@
-import {
-  Widget as PhosphorWidget,
-} from '@phosphor/widgets';
-
-import {
-  Widget as LuminoWidget,
-} from '@lumino/widgets';
+import { Widget as PhosphorWidget } from "@phosphor/widgets";
+import { Widget as LuminoWidget } from "@lumino/widgets";
+import { AWSRegion } from "./types";
 
 export class PhosphorMainLauncher extends PhosphorWidget {
   /**
@@ -29,26 +25,28 @@ export class LuminoMainLauncher extends LuminoWidget {
 }
 
 export class MainLauncher {
-  static create(version: number, cssPath: string) {
+  static create(version: number, baseUrl: string, cssPath: string, region: AWSRegion): PhosphorMainLauncher | LuminoMainLauncher {
     const widget = version === 1 ? new PhosphorMainLauncher() : new LuminoMainLauncher();
 
     widget.cssPath = cssPath;
-    widget.id = 'aws_glue_databrew_jupyter';
-    widget.title.label = 'AWS Glue DataBrew';
+    widget.id = "aws_glue_databrew_jupyter";
+    widget.title.label = "AWS Glue DataBrew";
     widget.title.closable = true;
 
-    widget.consoleRoot = document.createElement('html');
-    widget.consoleRoot.setAttribute('style', 'height: 100%');
+    widget.consoleRoot = document.createElement("html");
+    widget.consoleRoot.setAttribute("style", "height: 100%");
     widget.node.appendChild(widget.consoleRoot);
 
-    widget.consoleRoot.insertAdjacentHTML('beforeend',
+    widget.consoleRoot.insertAdjacentHTML("beforeend",
       `
         <head>
           <meta charset="UTF-8">
           <meta name="awsc-lang" content="en">
+          <meta id="jupyter-server-base-url" content="${baseUrl}">
           <meta name="aws-glue-databrew-jupyter" content="true">
+          <meta id="aws-glue-databrew-jupyter-region" content="${region || ""}">
           <title>AWS</title>
-          <link rel="stylesheet" href=` + cssPath + `>
+          <link rel="stylesheet" href="${cssPath}">
           <style>
             .loader {
               display: inline-block;
@@ -93,7 +91,7 @@ export class MainLauncher {
             </div>
           </div>
         </body>
-    `,
+    `
     );
 
     return widget;

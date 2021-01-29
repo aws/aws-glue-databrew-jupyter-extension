@@ -8,7 +8,6 @@
     "jsx": "react",
     "module": "esnext",
     "moduleResolution": "node",
-    "noEmitOnError": true,
     "noImplicitAny": true,
     "noUnusedLocals": true,
     "preserveWatchOutput": true,
@@ -17,7 +16,10 @@
     "strict": true,
     "strictNullChecks": false,
     "target": "es2017",
-    "types": []
+    "types": [
+      "jest"
+    ],
+    "resolveJsonModule": true
   },
   "include": [
     "src/index.ts",
@@ -25,6 +27,8 @@
     "src/MainLauncher.ts",
     "src/LeftSideLauncher.ts",
     "src/constants.ts",
-    "src/svg_icons.d.ts"
+    "src/client.ts",
+    "src/types.ts",
+    "src/subdomain.json"
   ]
 }
