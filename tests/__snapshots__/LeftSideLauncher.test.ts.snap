@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LeftSideLauncher create should create launcher v1 1`] = `
+<div
+  class="p-Widget"
+  id="aws_glue_databrew_jupyter_left_side_launcher"
+>
+  <header
+    class="aws_glue_databrew_header"
+  >
+    AWS Glue DataBrew
+  </header>
+  <div
+    id="aws_glue_databrew_launch_button"
+    title="Welcome to AWS Glue DataBrew"
+  >
+    Launch AWS Glue DataBrew
+  </div>
+</div>
+`;
+
+exports[`LeftSideLauncher create should create launcher v2 1`] = `
+<div
+  class="lm-Widget p-Widget"
+  id="aws_glue_databrew_jupyter_left_side_launcher"
+>
+  <header
+    class="aws_glue_databrew_header"
+  >
+    AWS Glue DataBrew
+  </header>
+  <div
+    id="aws_glue_databrew_launch_button"
+    title="Welcome to AWS Glue DataBrew"
+  >
+    Launch AWS Glue DataBrew
+  </div>
+</div>
+`;

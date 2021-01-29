@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`initiateExtension execute should handle attached widget 1`] = `undefined`;
+
+exports[`initiateExtension execute should handle unattached widget 1`] = `
+<html>
+  <script
+    src="main.js"
+  />
+</html>
+`;
