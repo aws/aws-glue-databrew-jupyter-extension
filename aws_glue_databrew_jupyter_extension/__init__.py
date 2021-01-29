@@ -1,5 +1,5 @@
 def _jupyter_server_extension_paths():
-    return [{"module": "aws_jupyter_proxy"}]
+    return [{"module": "aws_glue_databrew_jupyter_extension"}]
 
 
 def _jupyter_nbextension_paths():
