@@ -1,0 +1,22 @@
+# This workflow will run tests, linter, and build commands when a pull request to main branch is created, or a push event to main branch .
+name: build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm test
+      - run: npm run lint
+      - run: npm run build
