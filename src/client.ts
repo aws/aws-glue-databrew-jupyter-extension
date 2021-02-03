@@ -2,7 +2,7 @@ import { AWSConfig } from "./types";
 
 export const getAWSConfig = async (basePath: string): Promise<AWSConfig> => {
   try {
-    const config = await get<AWSConfig>("/awsproxy/awsconfig");
+    const config = await get<AWSConfig>(`${basePath}awsproxy/awsconfig`);
     return {
       region: config.region,
     };
