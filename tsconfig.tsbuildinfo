@@ -1434,7 +1434,7 @@
         "signature": "9153563ec8445a492ffc79678a0be69473ad9c10db1a4804b20f6a7640aee454"
       },
       "./src/client.ts": {
-        "version": "5177ad1dfb89109c5e8ffd8ef7e3ae979c40e42ab591357ac5cb75326cf302f5",
+        "version": "cb897a1ca962acc559cea1b98fc53a6ffe27b6b3429ea9ac76d6b8c3239de354",
         "signature": "98e819b07021a75c61c3d8a6601f068b2fdb6eb227ada63cb085ec36824cd1b1"
       },
       "./src/subdomain.json": {
