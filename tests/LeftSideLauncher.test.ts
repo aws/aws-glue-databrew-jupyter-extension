@@ -3,7 +3,7 @@ import { LeftSideLauncher } from "../src/LeftSideLauncher";
 
 describe("LeftSideLauncher", () => {
   describe("create", () => {
-    test.each([[1], [2]])("should create launcher v%s", (version) => {
+    test.each([["1.0.0"], ["2.0.0"]])("should create launcher v%s", (version) => {
       const execute = jest.fn(() => undefined);
       const command: Partial<CommandRegistry> = { execute };
       const widget = LeftSideLauncher.create(version, command as CommandRegistry);

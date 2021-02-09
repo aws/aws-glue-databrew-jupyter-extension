@@ -1,7 +1,6 @@
 import { Widget as PhosphorWidget } from "@phosphor/widgets";
 import { Widget as LuminoWidget } from "@lumino/widgets";
 import { AWSRegion } from "./types";
-
 export class PhosphorMainLauncher extends PhosphorWidget {
   /**
    * The image element associated with the widget.
@@ -25,8 +24,9 @@ export class LuminoMainLauncher extends LuminoWidget {
 }
 
 export class MainLauncher {
-  static create(version: number, baseUrl: string, cssPath: string, region: AWSRegion): PhosphorMainLauncher | LuminoMainLauncher {
-    const widget = version === 1 ? new PhosphorMainLauncher() : new LuminoMainLauncher();
+  static create(version: string, baseUrl: string, cssPath: string, region: AWSRegion): PhosphorMainLauncher | LuminoMainLauncher {
+    const majorVersion = Number(version.split(".")[0]);
+    const widget = majorVersion === 1 ? new PhosphorMainLauncher() : new LuminoMainLauncher();
 
     widget.cssPath = cssPath;
     widget.id = "aws_glue_databrew_jupyter";
@@ -43,6 +43,7 @@ export class MainLauncher {
           <meta charset="UTF-8">
           <meta name="awsc-lang" content="en">
           <meta id="jupyter-server-base-url" content="${baseUrl}">
+          <meta id="jupyterlab-version" content="${version}">
           <meta name="aws-glue-databrew-jupyter" content="true">
           <meta id="aws-glue-databrew-jupyter-region" content="${region || ""}">
           <title>AWS</title>

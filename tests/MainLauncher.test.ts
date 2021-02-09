@@ -3,7 +3,7 @@ import { AWSRegion } from "../src/types";
 
 describe("MainLauncher", () => {
   describe("create", () => {
-    test.each([[1], [2]])("should create launcher v%s", (version) => {
+    test.each([["1.0.0"], ["2.0.0"]])("should create launcher v%s", (version) => {
       const baseUrl = "/";
       const region = "us-east-1";
       const cssPath = "path";
@@ -15,7 +15,7 @@ describe("MainLauncher", () => {
       expect(widget.node).toMatchSnapshot();
     });
 
-    test.each([[1], [2]])("should create launcher v%s with undefined region", (version) => {
+    test.each([["1.0.0"], ["2.0.0"]])("should create launcher v%s with undefined region", (version) => {
       const baseUrl = "/";
       const region: AWSRegion = undefined;
       const cssPath = "path";
@@ -27,7 +27,7 @@ describe("MainLauncher", () => {
       expect(widget.node).toMatchSnapshot();
     });
 
-    test.each([[1], [2]])("should create launcher v%s with null region", (version) => {
+    test.each([["1.0.0"], ["2.0.0"]])("should create launcher v%s with null region", (version) => {
       const baseUrl = "/";
       const region: AWSRegion = null;
       const cssPath = "path";

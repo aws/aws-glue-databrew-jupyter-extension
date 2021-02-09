@@ -1666,15 +1666,15 @@
         "signature": "ce75ab9766be65e1b6837cba39ea25ebfbe25f431e0f97e1863743817fad2d91"
       },
       "./src/leftsidelauncher.ts": {
-        "version": "5b4375923d3d269cfc601d07c00b19face2564803f6595576fad89ee585b42c3",
-        "signature": "c9c5e764f2a5482546c1c4fb40c310263397ff5c53069e1f485ae55eea498abc"
+        "version": "641f10537fa6889d87784c5f6f1cf7144523401fa5afa71260eefb4550a49d8a",
+        "signature": "c8b3fe3bdcefb775c619133ab055fcaf06453ea6fddad87083fb26ccedeb6fda"
       },
       "./src/mainlauncher.ts": {
-        "version": "fee43110b56cd91c3f875a533a8a5f144e890ba481f7c9785319a72950bc2dae",
-        "signature": "63381bcdae9c1db9ed8996e5194c37193906891e8759e61a1ea46ff8549a19e0"
+        "version": "b659f7bc73e492b264ae3ff7e0e484199220ce40428dfcd48421460a2e958691",
+        "signature": "8b58ba85c9ba6fe94f364347f20d673f9669bb2474f45935375c84df2e94dde7"
       },
       "./src/aws_glue_databrew_extension.ts": {
-        "version": "7db99f94d93b99b3ce6d734250e376b9eb787929ee1ebe6b8fe33502755a9da3",
+        "version": "a9163cc4803cfa043990b3c9483207cca4aa006bf4ad9f9fdae91c182ceb5492",
         "signature": "9253a39dd2652b931dcd5d7d788afbaf995ceb27ff8e268084603f93e1cf0a60"
       },
       "./src/index.ts": {

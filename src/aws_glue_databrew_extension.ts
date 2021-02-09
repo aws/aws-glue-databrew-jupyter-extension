@@ -9,7 +9,7 @@ import { GLUE_DATABREW_RENDER } from "./constants";
 import { LeftSideLauncher } from "./LeftSideLauncher";
 import { MainLauncher } from "./MainLauncher";
 
-const getAppVersion = (app: JupyterFrontEnd) => Number(app.version.split(".")[0]);
+const getAppVersion = (app: JupyterFrontEnd) => app.version;
 const getBaseUrl = (app: JupyterFrontEnd) => app.serviceManager.serverSettings.baseUrl;
 
 /**
