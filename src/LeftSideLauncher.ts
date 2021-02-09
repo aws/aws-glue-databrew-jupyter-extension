@@ -27,8 +27,9 @@ export class LuminoLeftSideLauncher extends LuminoWidget {
 }
 
 export class LeftSideLauncher {
-  static create(version: number, commands: PhosphorCommandRegistry | LuminoCommandRegistry): PhosphorLeftSideLauncher | LuminoLeftSideLauncher {
-    const widget = version === 1 ? new PhosphorLeftSideLauncher() : new LuminoLeftSideLauncher();
+  static create(version: string, commands: PhosphorCommandRegistry | LuminoCommandRegistry): PhosphorLeftSideLauncher | LuminoLeftSideLauncher {
+    const majorVersion = Number(version.split(".")[0]);
+    const widget = majorVersion === 1 ? new PhosphorLeftSideLauncher() : new LuminoLeftSideLauncher();
     widget.commands = commands;
 
     const launchButton = document.createElement("div");

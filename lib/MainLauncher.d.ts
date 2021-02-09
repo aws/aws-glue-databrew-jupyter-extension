@@ -22,5 +22,5 @@ export declare class LuminoMainLauncher extends LuminoWidget {
     cssPath: string;
 }
 export declare class MainLauncher {
-    static create(version: number, baseUrl: string, cssPath: string, region: AWSRegion): PhosphorMainLauncher | LuminoMainLauncher;
+    static create(version: string, baseUrl: string, cssPath: string, region: AWSRegion): PhosphorMainLauncher | LuminoMainLauncher;
 }

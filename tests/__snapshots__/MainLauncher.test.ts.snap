@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MainLauncher create should create launcher v1 1`] = `
+exports[`MainLauncher create should create launcher v1.0.0 1`] = `
 <div
   class="p-Widget"
   id="aws_glue_databrew_jupyter"
@@ -25,6 +25,12 @@ exports[`MainLauncher create should create launcher v1 1`] = `
     <meta
       content="/"
       id="jupyter-server-base-url"
+    />
+    
+          
+    <meta
+      content="1.0.0"
+      id="jupyterlab-version"
     />
     
           
@@ -127,7 +133,7 @@ exports[`MainLauncher create should create launcher v1 1`] = `
 </div>
 `;
 
-exports[`MainLauncher create should create launcher v1 with null region 1`] = `
+exports[`MainLauncher create should create launcher v1.0.0 with null region 1`] = `
 <div
   class="p-Widget"
   id="aws_glue_databrew_jupyter"
@@ -152,6 +158,12 @@ exports[`MainLauncher create should create launcher v1 with null region 1`] = `
     <meta
       content="/"
       id="jupyter-server-base-url"
+    />
+    
+          
+    <meta
+      content="1.0.0"
+      id="jupyterlab-version"
     />
     
           
@@ -254,7 +266,7 @@ exports[`MainLauncher create should create launcher v1 with null region 1`] = `
 </div>
 `;
 
-exports[`MainLauncher create should create launcher v1 with undefined region 1`] = `
+exports[`MainLauncher create should create launcher v1.0.0 with undefined region 1`] = `
 <div
   class="p-Widget"
   id="aws_glue_databrew_jupyter"
@@ -279,6 +291,12 @@ exports[`MainLauncher create should create launcher v1 with undefined region 1`]
     <meta
       content="/"
       id="jupyter-server-base-url"
+    />
+    
+          
+    <meta
+      content="1.0.0"
+      id="jupyterlab-version"
     />
     
           
@@ -381,7 +399,7 @@ exports[`MainLauncher create should create launcher v1 with undefined region 1`]
 </div>
 `;
 
-exports[`MainLauncher create should create launcher v2 1`] = `
+exports[`MainLauncher create should create launcher v2.0.0 1`] = `
 <div
   class="lm-Widget p-Widget"
   id="aws_glue_databrew_jupyter"
@@ -406,6 +424,12 @@ exports[`MainLauncher create should create launcher v2 1`] = `
     <meta
       content="/"
       id="jupyter-server-base-url"
+    />
+    
+          
+    <meta
+      content="2.0.0"
+      id="jupyterlab-version"
     />
     
           
@@ -508,7 +532,7 @@ exports[`MainLauncher create should create launcher v2 1`] = `
 </div>
 `;
 
-exports[`MainLauncher create should create launcher v2 with null region 1`] = `
+exports[`MainLauncher create should create launcher v2.0.0 with null region 1`] = `
 <div
   class="lm-Widget p-Widget"
   id="aws_glue_databrew_jupyter"
@@ -533,6 +557,12 @@ exports[`MainLauncher create should create launcher v2 with null region 1`] = `
     <meta
       content="/"
       id="jupyter-server-base-url"
+    />
+    
+          
+    <meta
+      content="2.0.0"
+      id="jupyterlab-version"
     />
     
           
@@ -635,7 +665,7 @@ exports[`MainLauncher create should create launcher v2 with null region 1`] = `
 </div>
 `;
 
-exports[`MainLauncher create should create launcher v2 with undefined region 1`] = `
+exports[`MainLauncher create should create launcher v2.0.0 with undefined region 1`] = `
 <div
   class="lm-Widget p-Widget"
   id="aws_glue_databrew_jupyter"
@@ -660,6 +690,12 @@ exports[`MainLauncher create should create launcher v2 with undefined region 1`]
     <meta
       content="/"
       id="jupyter-server-base-url"
+    />
+    
+          
+    <meta
+      content="2.0.0"
+      id="jupyterlab-version"
     />
     
           

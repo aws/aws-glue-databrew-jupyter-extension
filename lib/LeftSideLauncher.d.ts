@@ -17,5 +17,5 @@ export declare class LuminoLeftSideLauncher extends LuminoWidget {
     handleLaunchButtonClicked(): undefined;
 }
 export declare class LeftSideLauncher {
-    static create(version: number, commands: PhosphorCommandRegistry | LuminoCommandRegistry): PhosphorLeftSideLauncher | LuminoLeftSideLauncher;
+    static create(version: string, commands: PhosphorCommandRegistry | LuminoCommandRegistry): PhosphorLeftSideLauncher | LuminoLeftSideLauncher;
 }
