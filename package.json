@@ -1,6 +1,6 @@
 {
   "name": "aws_glue_databrew_jupyter",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A JupyterLab Glue DataBrew extension.",
   "license": "MIT",
   "author": "cfangzh@amazon.com, zssimjee@amazon.com, pagtkevi@amazon.com",
