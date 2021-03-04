@@ -15,10 +15,6 @@ This is an extension for Jupyter Lab that allows you to manage your AWS Glue Dat
 1. run `jupyter serverextension enable --py aws_jupyter_proxy`
 1. Search for aws_glue_databrew_jupyter in the Jupyter Lab plugin store and click install
 
-### Installation instructions for Amazon SageMaker Notebooks
-
-See https://github.com/aws/aws-glue-databrew-jupyter-extension/blob/main/SageMaker-Installation-Instructions.md
-
 ### Command-line installation instructions
 1. run `jupyter labextension install aws_glue_databrew_jupyter`
 1. Start jupyter lab: `jupyter lab`
