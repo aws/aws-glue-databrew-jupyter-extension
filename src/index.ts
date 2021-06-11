@@ -1,21 +1,23 @@
 import { initiateExtension } from "./aws_glue_databrew_extension";
 import {
-  CONTENT_PREFIX,
-  jsFileName,
-  PREFIX_URL,
-  styleFileName,
-} from "./constants";
+  getContentPrefixUrl,
+  getPrefixUrl,
+} from "./utils";
+import { jsFileName, styleFileName } from "./constants";
 
-export const getPaths = async (): Promise<string[]> => {
-  const prefix = await getPrefix();
+export const getPaths = async (region: string): Promise<string[]> => {
+  const prefix = await getPrefix(region);
+  const contentPrefixUrl = `${getContentPrefixUrl(region)}/${prefix}`;
   return [
-    `${CONTENT_PREFIX}/${prefix}/${jsFileName}`,
-    `${CONTENT_PREFIX}/${prefix}/${styleFileName}`,
+    `${contentPrefixUrl}/${jsFileName}`,
+    `${contentPrefixUrl}/${styleFileName}`,
   ];
 };
 
-export const getPrefix = async (): Promise<string> => {
-  const response = await fetch(PREFIX_URL);
+export const getPrefix = async (region: string): Promise<string> => {
+  const prefixUrl = getPrefixUrl(region);
+  const req = new Request(prefixUrl);
+  const response = await fetch(req);
   const json = await response.json();
   return json && json.prefix.toString();
 };

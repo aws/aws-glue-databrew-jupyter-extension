@@ -67,6 +67,54 @@ describe("initiateExtension", () => {
       expect(launcher.add).toHaveBeenCalledTimes(1);
     });
 
+    test("should activate plugin in cn region", async () => {
+      const getPaths = jest.fn().mockReturnValueOnce(Promise.resolve(["main.js", "styles.css"]));
+      jest.spyOn(MainLauncher, "create").mockReturnValueOnce(new LuminoMainLauncher());
+      jest.spyOn(LeftSideLauncher, "create").mockReturnValueOnce(new LuminoLeftSideLauncher());
+      jest.spyOn(client, "getAWSConfig").mockReturnValueOnce(Promise.resolve({
+        region: "cn-north-1",
+      }));
+      const extension = plugin.initiateExtension(getPaths);
+      const commands: Partial<CommandRegistry> = {
+        addCommand: jest.fn(),
+      };
+      const serviceManager = {
+        serverSettings: {
+          baseUrl: "http://localhost:8888/",
+        } as ServerConnection.ISettings,
+      } as ServiceManager;
+      const shell: Partial<JupyterFrontEnd.IShell> = {
+        add: jest.fn(),
+        activateById: jest.fn(),
+      };
+      const app: Partial<JupyterFrontEnd>  = {
+        commands: commands as CommandRegistry,
+        shell: shell as JupyterFrontEnd.IShell,
+        serviceManager,
+        version: "1.0.0",
+      };
+      const palette: Partial<ICommandPalette> = {
+        addItem: jest.fn(),
+      };
+      const restorer: Partial<ILayoutRestorer> = {
+        add: jest.fn(),
+      };
+      const launcher: Partial<ILauncher> = {
+        add: jest.fn(),
+      };
+      await extension.activate(
+        app as JupyterFrontEnd,
+        palette,
+        restorer,
+        launcher,
+      );
+      expect(getPaths).toHaveBeenCalledTimes(1);
+      expect(commands.addCommand).toHaveBeenCalledTimes(1);
+      expect(palette.addItem).toHaveBeenCalledTimes(1);
+      expect(shell.add).toHaveBeenCalledTimes(1);
+      expect(launcher.add).toHaveBeenCalledTimes(1);
+    });
+
     test("should activate plugin without launcher", async () => {
       const getPaths = jest.fn().mockReturnValueOnce(Promise.resolve(["main.js", "styles.css"]));
       jest.spyOn(MainLauncher, "create").mockReturnValueOnce(new LuminoMainLauncher());
