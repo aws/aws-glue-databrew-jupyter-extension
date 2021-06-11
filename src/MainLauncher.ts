@@ -1,6 +1,7 @@
 import { Widget as PhosphorWidget } from "@phosphor/widgets";
 import { Widget as LuminoWidget } from "@lumino/widgets";
 import { AWSRegion } from "./types";
+import { isCnPartition } from "./utils";
 export class PhosphorMainLauncher extends PhosphorWidget {
   /**
    * The image element associated with the widget.
@@ -28,9 +29,10 @@ export class MainLauncher {
     const majorVersion = Number(version.split(".")[0]);
     const widget = majorVersion === 1 ? new PhosphorMainLauncher() : new LuminoMainLauncher();
 
+    const awsText = isCnPartition(region) ? "Amazon" : "AWS";
     widget.cssPath = cssPath;
     widget.id = "aws_glue_databrew_jupyter";
-    widget.title.label = "AWS Glue DataBrew";
+    widget.title.label = `${awsText} Glue DataBrew`;
     widget.title.closable = true;
 
     widget.consoleRoot = document.createElement("html");
@@ -87,7 +89,7 @@ export class MainLauncher {
           <div id="app" style="height: 100%">
             <div class="loader-container">
               <div>
-                <div class="loader"></div><span>Launching AWS Glue DataBrew</span>
+                <div class="loader"></div><span>Launching ${awsText} Glue DataBrew</span>
               </div>
             </div>
           </div>

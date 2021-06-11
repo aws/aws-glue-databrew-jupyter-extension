@@ -133,6 +133,139 @@ exports[`MainLauncher create should create launcher v1.0.0 1`] = `
 </div>
 `;
 
+exports[`MainLauncher create should create launcher v1.0.0 in CN region 1`] = `
+<div
+  class="p-Widget"
+  id="aws_glue_databrew_jupyter"
+>
+  <html
+    style="height: 100%"
+  >
+    
+        
+          
+    <meta
+      charset="UTF-8"
+    />
+    
+          
+    <meta
+      content="en"
+      name="awsc-lang"
+    />
+    
+          
+    <meta
+      content="/"
+      id="jupyter-server-base-url"
+    />
+    
+          
+    <meta
+      content="1.0.0"
+      id="jupyterlab-version"
+    />
+    
+          
+    <meta
+      content="true"
+      name="aws-glue-databrew-jupyter"
+    />
+    
+          
+    <meta
+      content="cn-north-1"
+      id="aws-glue-databrew-jupyter-region"
+    />
+    
+          
+    <title>
+      AWS
+    </title>
+    
+          
+    <link
+      href="path"
+      rel="stylesheet"
+    />
+    
+          
+    <style>
+      
+            .loader {
+              display: inline-block;
+              border: 5px solid #f3f3f3;
+              border-radius: 50%;
+              border-top: 5px solid #3498db;
+              width: 40px;
+              height: 40px;
+              margin-right: 12px;
+              -webkit-animation: spin 2s linear infinite;
+              animation: spin 2s linear infinite;
+            }
+
+            @-webkit-keyframes spin {
+              0% { -webkit-transform: rotate(0deg); }
+              100% { -webkit-transform: rotate(360deg); }
+            }
+
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+
+            .loader-container {
+              font-size: 60px;
+              font-weight: 100;
+              color: #879196;
+              height: 100%;
+              width: 100%;
+              justify-content: center;
+              display: flex;
+              align-items: center;
+            }
+          
+    </style>
+    
+        
+        
+          
+    <div
+      id="app"
+      style="height: 100%"
+    >
+      
+            
+      <div
+        class="loader-container"
+      >
+        
+              
+        <div>
+          
+                
+          <div
+            class="loader"
+          />
+          <span>
+            Launching Amazon Glue DataBrew
+          </span>
+          
+              
+        </div>
+        
+            
+      </div>
+      
+          
+    </div>
+    
+        
+    
+  </html>
+</div>
+`;
+
 exports[`MainLauncher create should create launcher v1.0.0 with null region 1`] = `
 <div
   class="p-Widget"
@@ -515,6 +648,139 @@ exports[`MainLauncher create should create launcher v2.0.0 1`] = `
           />
           <span>
             Launching AWS Glue DataBrew
+          </span>
+          
+              
+        </div>
+        
+            
+      </div>
+      
+          
+    </div>
+    
+        
+    
+  </html>
+</div>
+`;
+
+exports[`MainLauncher create should create launcher v2.0.0 in CN region 1`] = `
+<div
+  class="lm-Widget p-Widget"
+  id="aws_glue_databrew_jupyter"
+>
+  <html
+    style="height: 100%"
+  >
+    
+        
+          
+    <meta
+      charset="UTF-8"
+    />
+    
+          
+    <meta
+      content="en"
+      name="awsc-lang"
+    />
+    
+          
+    <meta
+      content="/"
+      id="jupyter-server-base-url"
+    />
+    
+          
+    <meta
+      content="2.0.0"
+      id="jupyterlab-version"
+    />
+    
+          
+    <meta
+      content="true"
+      name="aws-glue-databrew-jupyter"
+    />
+    
+          
+    <meta
+      content="cn-north-1"
+      id="aws-glue-databrew-jupyter-region"
+    />
+    
+          
+    <title>
+      AWS
+    </title>
+    
+          
+    <link
+      href="path"
+      rel="stylesheet"
+    />
+    
+          
+    <style>
+      
+            .loader {
+              display: inline-block;
+              border: 5px solid #f3f3f3;
+              border-radius: 50%;
+              border-top: 5px solid #3498db;
+              width: 40px;
+              height: 40px;
+              margin-right: 12px;
+              -webkit-animation: spin 2s linear infinite;
+              animation: spin 2s linear infinite;
+            }
+
+            @-webkit-keyframes spin {
+              0% { -webkit-transform: rotate(0deg); }
+              100% { -webkit-transform: rotate(360deg); }
+            }
+
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+
+            .loader-container {
+              font-size: 60px;
+              font-weight: 100;
+              color: #879196;
+              height: 100%;
+              width: 100%;
+              justify-content: center;
+              display: flex;
+              align-items: center;
+            }
+          
+    </style>
+    
+        
+        
+          
+    <div
+      id="app"
+      style="height: 100%"
+    >
+      
+            
+      <div
+        class="loader-container"
+      >
+        
+              
+        <div>
+          
+                
+          <div
+            class="loader"
+          />
+          <span>
+            Launching Amazon Glue DataBrew
           </span>
           
               
