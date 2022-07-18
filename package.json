@@ -3,7 +3,7 @@
   "version": "1.0.5",
   "description": "A JupyterLab Glue DataBrew extension.",
   "license": "MIT",
-  "author": "cfangzh@amazon.com, zssimjee@amazon.com, pagtkevi@amazon.com",
+  "author": "cfangzh@amazon.com, zssimjee@amazon.com, pagtkevi@amazon.com, zulil@amazon.com",
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
     "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
@@ -24,10 +24,10 @@
     "watch:local": "npm run clean && tsc-watch -p tsconfig_local.json --onSuccess 'npm run rename'"
   },
   "dependencies": {
-    "@jupyterlab/application": ">=1.2.0 <3.0.0",
-    "@jupyterlab/launcher": ">=1.2.0 <3.0.0",
-    "@lumino/commands": "^1.0.0",
-    "@lumino/widgets": "^1.0.0",
+    "@jupyterlab/application": ">=3.0.0",
+    "@jupyterlab/launcher": ">=3.0.0",
+    "@lumino/commands": "^1.19.0",
+    "@lumino/widgets": "^1.30.0",
     "@phosphor/commands": "^1.0.0",
     "@phosphor/widgets": "^1.0.0"
   },
