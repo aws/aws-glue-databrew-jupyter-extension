@@ -19,7 +19,7 @@
     "lint": "eslint . --ext .ts",
     "prepublishOnly": "npm run build",
     "rename": "mv ./lib/index_local.js ./lib/index.js && mv ./lib/index_local.d.ts ./lib/index.d.ts",
-    "test": "jest",
+    "test": "NODE_ENV=test jest",
     "watch": "tsc -w",
     "watch:local": "npm run clean && tsc-watch -p tsconfig_local.json --onSuccess 'npm run rename'"
   },

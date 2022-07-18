@@ -17,5 +17,5 @@ module.exports = {
     "^.+\\.svg$": "<rootDir>/tests/transform.js",
   },
   testRegex: "\\.test\\.ts?$",
-  transformIgnorePatterns: ["/node_modules/(?!@jupyterlab)"],
+  transformIgnorePatterns: ["/node_modules/(?!(@jupyterlab|lib0|y-protocols))"],
 };
