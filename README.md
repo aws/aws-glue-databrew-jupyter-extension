@@ -7,7 +7,7 @@ This is an extension for Jupyter Lab that allows you to manage your AWS Glue Dat
 1. boto3 version 1.16.17 or greater
 1. botocore version 1.19.17 or greater
 1. configure the aws cli. https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
-1. jupyter lab version 1.2 or 2.x
+1. jupyter lab version 3.x
 
 ### Installation instructions for Jupyter Lab
 

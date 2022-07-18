@@ -1,0 +1,9 @@
+README.md
+setup.py
+aws_glue_databrew_jupyter_extension/__init__.py
+aws_glue_databrew_jupyter_extension.egg-info/PKG-INFO
+aws_glue_databrew_jupyter_extension.egg-info/SOURCES.txt
+aws_glue_databrew_jupyter_extension.egg-info/dependency_links.txt
+aws_glue_databrew_jupyter_extension.egg-info/requires.txt
+aws_glue_databrew_jupyter_extension.egg-info/top_level.txt
+aws_glue_databrew_jupyter_extension/etc/aws_glue_databrew_jupyter_extension.json
