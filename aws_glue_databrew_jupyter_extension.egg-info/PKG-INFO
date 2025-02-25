@@ -1,5 +1,5 @@
 Metadata-Version: 2.2
-Name: aws_glue_databrew_jupyter_extension
+Name: aws-glue-databrew-jupyter-extension
 Version: 1.0.0
 License-File: LICENSE
 Requires-Dist: aws-jupyter-proxy
