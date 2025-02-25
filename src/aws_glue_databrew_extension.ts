@@ -32,7 +32,7 @@ export const initiateExtension = (
     const baseUrl = getBaseUrl(app);
     const url = new URL(baseUrl);
     const { region } = await getAWSConfig(url.pathname);
-    const [jsPath, cssPath] = await getPaths(region);
+    const [jsPath, cssPath, jsVendorsPath] = await getPaths(region);
     const awsText = isCnPartition(region) ? "Amazon" : "AWS";
     const consoleWidget = MainLauncher.create(
       version,
@@ -48,9 +48,11 @@ export const initiateExtension = (
         if (!consoleWidget.isAttached) {
           app.shell.add(consoleWidget as Widget, "main");
           const script = document.createElement("script");
-
+          const scriptVendors = document.createElement("script");
           script.setAttribute("src", jsPath);
+          scriptVendors.setAttribute("src", jsVendorsPath);
           consoleWidget.consoleRoot.appendChild(script);
+          consoleWidget.consoleRoot.appendChild(scriptVendors);
         }
         app.shell.activateById(consoleWidget.id);
       },

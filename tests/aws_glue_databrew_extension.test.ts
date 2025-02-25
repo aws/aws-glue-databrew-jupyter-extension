@@ -166,7 +166,7 @@ describe("initiateExtension", () => {
 
   describe("execute", () => {
     test("should handle unattached widget", async () => {
-      const getPaths = jest.fn().mockReturnValueOnce(Promise.resolve(["main.js", "styles.css"]));
+      const getPaths = jest.fn().mockReturnValueOnce(Promise.resolve(["main.js", "styles.css", "vendors.js"]));
       const widget = new LuminoMainLauncher();
       widget.consoleRoot = document.createElement("html");
       const mainLauncherMock = jest.spyOn(MainLauncher, "create").mockReturnValueOnce(widget);
