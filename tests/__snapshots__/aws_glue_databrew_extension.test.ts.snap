@@ -7,5 +7,8 @@ exports[`initiateExtension execute should handle unattached widget 1`] = `
   <script
     src="main.js"
   />
+  <script
+    src="vendors.js"
+  />
 </html>
 `;

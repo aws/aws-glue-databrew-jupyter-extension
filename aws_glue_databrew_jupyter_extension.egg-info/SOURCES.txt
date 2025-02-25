@@ -1,3 +1,4 @@
+LICENSE
 README.md
 setup.py
 aws_glue_databrew_jupyter_extension/__init__.py

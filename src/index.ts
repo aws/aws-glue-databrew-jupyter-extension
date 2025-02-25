@@ -3,7 +3,9 @@ import {
   getContentPrefixUrl,
   getPrefixUrl,
 } from "./utils";
-import { jsFileName, styleFileName } from "./constants";
+import {
+  jsFileName,jsVendorsFileName, styleFileName,
+} from "./constants";
 
 export const getPaths = async (region: string): Promise<string[]> => {
   const prefix = await getPrefix(region);
@@ -11,6 +13,7 @@ export const getPaths = async (region: string): Promise<string[]> => {
   return [
     `${contentPrefixUrl}/${jsFileName}`,
     `${contentPrefixUrl}/${styleFileName}`,
+    `${contentPrefixUrl}/${jsVendorsFileName}`,
   ];
 };
 
